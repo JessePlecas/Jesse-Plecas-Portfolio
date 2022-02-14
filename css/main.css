@@ -35,7 +35,7 @@ img {
   padding-left: 13%;
   padding-right: auto;
   color: #fff;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 3px 3px 4px #000000;
   font-size: clamp(2.5em, 10vw, 12em);
   font-family: 'The Nautigal', cursive;
   z-index: 10;
@@ -103,6 +103,9 @@ header {
   top: 0;
   left: 0;
   max-width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -10;
 }
 
@@ -407,6 +410,7 @@ nav li:nth-of-type(3) {
   color: #fff;
   font-weight: 500;
   padding-right: 3em;
+  cursor: pointer;
 }
 
 .project-title {
