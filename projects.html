@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jesse Plecas Portfolio projects</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <a href="index.html" class="menu">JessePlecas</a>
+        <button class="menu open-overlay" type="button">Menu</button> 
+        <div class="overlay-navigation">
+            <nav role="navigation">
+              <ul>
+                <li><a href="index.html" data-content="The pretty page">Home</a></li>
+                <li><a class="project-open-overlay" href="projects.html" data-content="What I've done so far">Projects</a></li>
+                <li><a href="contact.html" data-content="Let's chat">Contact</a></li>
+              </ul>
+            </nav>
+          </div>             
+    </header>
+    
+    <div class="project-flex">
+      <figure class="project">
+        <img class="cover-image" src="assets/cyclezone-port-page.jpg">
+        <figcaption class="project-details">
+          <div>
+            <h2 class="project-title">CycleZone</h2>
+            <p class="project-text">Recently I designed and built a website for a local bike shop</p>
+            <a class="visit" href="https://github.com/JessePlecas/CycleZone" target="_blank">See code</a>
+            <a class="visit" href="https://jesseplecas.github.io/CycleZone/index.html" target="_blank">website</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <img class="cover-image" src="assets/natural-pro-page.jpg">
+        <figcaption class="project-details">
+          <div>
+            <h2 class="project-title">Natural</h2>
+            <p class="project-text">An ecommerce design lorem ipsum and whatnot</p>
+            <a class="visit" href="https://github.com/JessePlecas/ecommerce-natural" target="_blank">See code</a>
+            <a class="visit" href="https://jesseplecas.github.io/ecommerce-natural/" target="_blank">website</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <img class="cover-image" src="assets/music-pro-page.jpg">
+        <figcaption class="project-details">
+          <div>
+            <h2 class="project-title">Play</h2>
+            <p class="project-text">A simple React music app with a focus on design</p>
+            <a class="visit" href="#">See code</a>
+            <a class="visit" href="#">website</a>
+          </div>
+        </figcaption>
+      </figure>
+    </figure>  
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>$('.open-overlay').click(function() {
+var overlay_navigation = $('.overlay-navigation'),
+  nav_item_1 = $('nav li:nth-of-type(1)'),
+  nav_item_2 = $('nav li:nth-of-type(2)'),
+  nav_item_3 = $('nav li:nth-of-type(3)')
+
+overlay_navigation.toggleClass('overlay-active');
+if (overlay_navigation.hasClass('overlay-active')) {
+
+  overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+  nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+  nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+  nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+  
+} else {
+  overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+  nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+  nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+  nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+}
+})</script>
+
+        
+</body>
+</html>
