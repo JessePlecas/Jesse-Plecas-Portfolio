@@ -447,11 +447,12 @@ nav li:nth-of-type(3) {
 
 .project-text {
   color: #fff;
-  padding-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 @media only screen and (min-device-width: 920px) {
   .project-text {
+    padding-bottom: 2em;
     opacity: 0;
     -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
     transition: opacity 0.2s, -webkit-transform 0.35s;
