@@ -27,7 +27,7 @@
         <div class="contact-container">
             <h2 class="invite">&bull; Let's chat &bull;</h2>
             <div class="underline"></div>
-            <form action="#" method="post" id="contact-form">
+            <form action="contact-form-handler.php" method="post" id="contact-form">
               <div class="name">
                 <label for="name"></label>
                 <input type="text" placeholder="Name" name="name" id="name-input" required>
@@ -50,7 +50,7 @@
                 cols="30" rows="5" required></textarea>
               </div>
               <div class="submit">
-                <input type="submit" value="Send message" id="form-button" />
+                <input type="submit" class="form-control submit" value="Send message" id="form-button" name="submit" />
               </div>
             </form>
         </div>
