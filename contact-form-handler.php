@@ -5,12 +5,17 @@
         $email = $_POST['email'];
         $telephone = $_POST['telephone'];
         $subject = $_POST['subject'];
-        $message = $_POST['message']
+        $message = $_POST['message'];
+        $time = time();
 
-        $mailTo ="jesse@jesseplecas.com";
+        $to ="jesse@jesseplecas.com";
         $headers = "From: ".$email;
         $txt = "You have a new email from ".$name.".\n\n".$message;
 
-        mail($mailTo, $subject, $txt, $headers);
+        mail($to, $subject, $txt, $headers);
         header("Location: contact.html?mailsend");
+
+        print "Script Ran $time";
+       
     }
+?>
