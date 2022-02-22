@@ -588,3 +588,126 @@ header {
     background: #fff;
     color: #275978;
   }
+
+  /* ========= About ===========*/ 
+.about-body {
+  position: relative;
+  display: grid;
+  background: #5e2d36;
+  height: 100vh;
+  padding-top: 3vmin;
+  padding-right: 3vmin;
+}
+
+  .about {
+    z-index: 100;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding-bottom: 4vmin;
+    height: 80vh;
+    width: 100%;
+    background-color: #502531;
+    color: #d1c494;
+  }
+
+  .about-title {
+    padding-left: 1.1em;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 8vw;
+    width: 100%;
+    z-index: 2;
+
+    > .about-inner {
+      display: inline-block;
+    }
+  }
+
+  @keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @keyframes outer-left {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: none;
+    }
+    
+  }
+
+  @keyframes inner-left {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: none;
+    }
+  }
+
+  .upper-title,
+  .lower-title {
+    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+
+  .about-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both;
+  }
+
+  .upper-title-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .lower-title-inner {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .about-title {
+    animation: outer-left 1s 1s ease both;
+  }
+
+  .upper-title {
+    > .upper-title-inner {
+      display: inline-block;
+    }
+  }
+
+  .lower-title {
+    display: inline-block;
+  }
+
+  .about-text {
+    font-size: 30px;
+  }
+
+  .my-image {
+    grid-row: 1;
+    grid-column: 2;
+    
+    margin-left: -2rem;
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+  }
+
+  @keyframes image-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
