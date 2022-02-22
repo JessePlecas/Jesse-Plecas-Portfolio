@@ -605,19 +605,25 @@ header {
 
   .about {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
     align-items: center;
     padding-bottom: 4vmin;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     background-color: #502531;
     color: #d1c494;
   }
 
+  @media only screen and (min-device-width : 768px){
+    .about {
+      grid-template-columns: 1fr 2fr;
+  
+    }
+  }
+
   .about-title {
     padding-left: 1.1em;
-    grid-column: 1 / -1;
-    grid-row: 1;
+    grid-row: 2 / 3;
     font-family: 'Playfair Display', serif;
     font-size: 8vw;
     width: 100%;
@@ -627,6 +633,16 @@ header {
       display: inline-block;
     }
   }
+  
+
+  @media only screen and (min-device-width : 768px){
+    .about-title {
+      padding-top: 2em;
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+  }
+  
 
   @keyframes text-clip {
     from {
@@ -692,15 +708,41 @@ header {
   }
 
   .about-text {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .skills {
+    padding-left: 0;
+  }
+
+  .skill {
+    list-style: none;
+    font-size: .6em;
+  }
+
+  .fa-linkedin {
+    color:#d1c494;
   }
 
   .my-image {
     grid-row: 1;
-    grid-column: 2;
-    
     margin-left: -2rem;
     animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+  }
+
+  @media only screen and (min-device-width : 768px) {
+    .my-image {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    .about-text {
+      font-size: 30px;
+    }
+
+    .skill {
+      font-size: .4em;
+    }
   }
 
   @keyframes image-in {
