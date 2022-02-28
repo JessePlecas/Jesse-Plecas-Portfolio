@@ -16,6 +16,139 @@ body {
   overflow: hidden;
 }
 
+/*===Preload page===*/
+.preload {
+  position: absolute;
+  background-color: #191a1a;
+  text-align: center;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 100000;
+}
+
+span {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  color: #eee;
+  font-size: 2em;
+}
+
+.loading1 {
+  -webkit-animation: drop 2s ease-in-out infinite;
+          animation: drop 2s ease-in-out infinite;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  font-family: 'The Nautigal', cursive;
+}
+
+.loading2 {
+  -webkit-animation: drop 2.5s ease-in-out infinite;
+          animation: drop 2.5s ease-in-out infinite;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  font-family: 'Playfair Display', serif;
+}
+
+.loading3 {
+  -webkit-animation: drop 3s ease-in-out infinite;
+          animation: drop 3s ease-in-out infinite;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+  font-family: 'The Nautigal', cursive;
+}
+
+.loading4 {
+  -webkit-animation: drop 3.5s ease-in-out infinite;
+          animation: drop 3.5s ease-in-out infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  font-family: 'Montserrat', serif;
+}
+
+.loading5 {
+  -webkit-animation: drop 4s ease-in-out infinite;
+          animation: drop 4s ease-in-out infinite;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+  font-family: 'Playfair Display', serif;
+}
+
+.loading6 {
+  -webkit-animation: drop 4.5s ease-in-out infinite;
+          animation: drop 4.5s ease-in-out infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  font-family: 'The Nautigal', cursive;
+}
+
+.loading7 {
+  -webkit-animation: drop 5s ease-in-out infinite;
+          animation: drop 5s ease-in-out infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  font-family: 'Playfair Display', serif;
+}
+
+@-webkit-keyframes drop {
+  10% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+    top: 3.78em;
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+  80% {
+    opacity: 1;
+    top: 3.78em;
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    top: 6.94em;
+  }
+}
+
+@keyframes drop {
+  10% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+    top: 3.78em;
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+  80% {
+    opacity: 1;
+    top: 3.78em;
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    top: 6.94em;
+  }
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
 img {
   width: 100%;
   height: auto;
