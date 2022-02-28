@@ -16,7 +16,7 @@
             <div class="overlay-navigation">
                 <nav role="navigation">
                   <ul>
-                    <li><a href="about.html" data-content="My resume and a bit about me">About</a></li>
+                    <li><a href="about.html" data-content="My skills and LinkedIn">About</a></li>
                     <li><a href="projects.html" data-content="What I've done so far">Projects</a></li>
                     <li><a href="contact.html" data-content="Let's chat">Contact</a></li>
                   </ul>
@@ -27,7 +27,7 @@
         <div class="contact-container">
             <h2 class="invite">&bull; Let's chat &bull;</h2>
             <div class="underline"></div>
-            <form action="contact-form-handler.php" method="POST" id="contact-form">
+            <form action="contact-form-handler.php" method="POST" id="contact-form" onSubmit="alert('Thank you!');">
               <div class="name">
                 <label for="name"></label>
                 <input type="text" placeholder="Name" name="name" id="name-input" required>
