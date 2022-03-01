@@ -16,89 +16,7 @@ body {
   overflow: hidden;
 }
 /*===Preload page===*/
-.preload {
-  position: absolute;
-  background-color: #191a1a;
-  text-align: center;
-  transition : opacity 0.5s ease;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 100000;
-}
 
-span {
-  position: relative;
-  display: block;
-  text-transform: uppercase;
-  transform: rotateX(-90deg);
-  color: #eee;
-  font-size: 2em;
-}
-
-.loading1 {
-  animation: drop 2s ease-in-out infinite;
-  animation-delay: 2.2s;
-  font-family: 'The Nautigal', cursive;
-}
-
-.loading2 {
-  animation: drop 2.5s ease-in-out infinite;
-  animation-delay: 2.5s;
-  font-family: 'Playfair Display', serif;
-}
-
-.loading3 {
-  animation: drop 3s ease-in-out infinite;
-  animation-delay: 2.8s;
-  font-family: 'The Nautigal', cursive;
-}
-
-.loading4 {
-  animation: drop 3.5s ease-in-out infinite;
-  animation-delay: 3s;
-  font-family: 'Montserrat', serif;
-}
-
-.loading5 {
-  animation: drop 4s ease-in-out infinite;
-  animation-delay: 3.3s;
-  font-family: 'Playfair Display', serif;
-}
-
-.loading6 {
-  animation: drop 4.5s ease-in-out infinite;
-  animation-delay: 4s;
-  font-family: 'The Nautigal', cursive;
-}
-
-.loading7 {
-  animation: drop 5s ease-in-out infinite;
-  animation-delay: 6s;
-  font-family: 'Playfair Display', serif;
-}
-
-@keyframes drop {
-  10% {
-      opacity: 0.3;
-  }
-  20% {
-      opacity: 1;
-      top: 3.78em;
-      transform: rotateX(-360deg);
-  }
-  80% {
-      opacity: 1;
-      top: 3.78em;
-      transform: rotateX(-360deg);
-  }
-  90% {
-      opacity: 0.5;
-  }
-  100% {
-      opacity: 0;
-      top: 6.94em
-  }
-}
 
 .preload-finish {
   opacity: 0;
@@ -810,8 +728,10 @@ header {
     font-size: .6em;
   }
 
-  .fa-linkedin {
+  .fab {
     color:#d1c494;
+    display: inline;
+    padding-right: .5em;
   }
 
   .my-image {
@@ -842,4 +762,10 @@ header {
     to {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
+  }
+
+  .about-me {
+    font-size: clamp(1.2rem, 0.8173vw + 0.9278vw, 1.875rem);
+    grid-column: 1 / 3;
+    padding: 1em;
   }
